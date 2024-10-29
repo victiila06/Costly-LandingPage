@@ -161,7 +161,6 @@ header .fa-bars {
     margin-top: 8rem;
 }
 
-/* Estilos de las tarjetas de Misión, Visión, Valores */
 .cards {
     font-family: "Fenix", sans-serif;
     display: flex;
@@ -191,7 +190,7 @@ header .fa-bars {
 }
 
 .cards p, .cards ul {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 400;
 }
 
@@ -207,7 +206,7 @@ header .fa-bars {
 
 .beneficios {
     padding: 6rem 0;
-    background-color: #f8f9fa;
+    background-color: #fff
 }
   
 .beneficios .container {
@@ -223,50 +222,54 @@ header .fa-bars {
     text-align: center;
     font-size: 4rem;
     color: #333;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
   
 .benefit-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 2rem;
 }
   
 .benefit-item .text-content {
     flex: 1;
     padding-right: 2rem;
-    /* margin-left: 10rem; */
+    align-items: center;
     /* max-width: 200%;     */
+    margin-left: 16rem;
 }
   
 .benefit-item .text-content h3 {
     font-family: "Ruda", sans-serif;
     font-weight: 900;
     font-size: 3rem;
-    color: #333;
-    margin-bottom: 1rem;
+    color: #000;
+    margin-bottom: 2rem;
+    align-items: center;
 }
   
 .benefit-item .text-content p {
     font-family: "Fenix", sans-serif;
     font-weight: 400;
     font-size: 2.5rem;
-    color: #555;
+    color: #000;
     line-height: 1.8;
+    margin-bottom: 3rem;
+    align-items: center;
 }
   
 .benefit-item .image-content {
     flex: 1;
-    margin-left: 20rem;
+    align-items: center;
+    justify-content: space-between;
 }
   
 .benefit-item .image-content img {
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     border-radius: 8px;
     object-fit: cover;
-    align-items: center;   
+    margin-left: 20rem;
 }
 
 .herramientasv {
@@ -280,7 +283,7 @@ header .fa-bars {
     font-size: 3rem;
     font-family: "Ruda", sans-serif;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-weight: 900;
 }
 
@@ -299,6 +302,50 @@ header .fa-bars {
 
 .herramientasv .card {
     display: inline-block;
+    width: 350px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: var(--green2);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.herramientasv .card img {
+    max-width: 200px;
+    height: auto;
+}
+
+.herramientasc {
+    text-align: center;
+    padding: 20px;
+    /* background-color: var(--green2); */
+    font-family: "Fenix", sans-serif;
+}
+
+.herramientasc h2 {
+    font-size: 3rem;
+    font-family: "Ruda", sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-weight: 900;
+}
+
+.herramientasc h3 {
+    font-size: 2.3rem;
+    font-family: "Ruda", sans-serif;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.herramientasc p {
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+.herramientasc .card {
+    display: inline-block;
     width: 250px;
     margin: 20px;
     padding: 20px;
@@ -309,9 +356,77 @@ header .fa-bars {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.herramientasv .card img {
-    max-width: 170px;
+.herramientasc .card img {
+    max-width: 200px;
     height: auto;
+}
+
+.plans {
+    padding: 4rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+  
+.plans h2 {
+    font-family: "Ruda", sans-serif;
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 5rem;
+    font-weight: 800;
+}
+  
+.plan-container {
+    display: flex;
+    justify-content: center;
+    gap: 12rem;
+}
+  
+.plan {
+    border: 1px solid #ccc;
+    background-color: var(--green2);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.plan h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    font-family: "Ruda", sans-serif;
+    font-weight: 900;
+}
+  
+.plan ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #555;
+}
+  
+.plan li {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: "Fenix", sans-serif;
+    font-weight: 400;
+}
+  
+.join-button {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background-color: var(--green);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+  
+.join-button:hover {
+    background-color: #585858;
 }
 
 @media (max-width: 991px) {
@@ -335,6 +450,15 @@ header .fa-bars {
 
     .herramientasv .card {
         width: 300px;
+    }
+
+    .herramientasc .card {
+        width: 300px;
+    }
+
+    .plan-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     header .fa-bars{
