@@ -72,24 +72,13 @@ header .navbar a {
     font-size: 2rem;
     padding: 2.5rem;
     color:#878787;
-}
-
-header .navbar b {
-    display: inline-block;
-    background:var(--green);
-    color:#fff;
-    padding:0.8rem 2rem;
-    cursor: pointer;
-    font-size: 2rem;
-    transition: background-color 0.3s ease;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Alinea verticalmente en el centro */
+    gap: 2rem; /* Espacio entre los enlaces */
 }
 
 header .navbar a:hover {
     color: var(--green);
-}
-
-header .navbar b:hover {
-    background-color:#585858
 }
 
 
@@ -236,7 +225,7 @@ header .fa-bars {
     padding-right: 2rem;
     align-items: center;
     /* max-width: 200%;     */
-    margin-left: 16rem;
+    margin-left: 15rem;
 }
   
 .benefit-item .text-content h3 {
