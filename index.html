@@ -13,24 +13,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fenix&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ruda:wght@400..900&display=swap" rel="stylesheet">
-    <!-- custom css file link -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="img/costly.png">
+
+    <link rel="stylesheet" href="public/assets/styles/styles.css">
+
 </head>
 <body>
-<header>
+<header>  
+    <a href="#" class="logo">
+      <img src="public/assets/images/logo.png"
+    </a>
 
-    <input  type="checkbox" name="" id="toggler";
-    <label for="toggler" class="fas fa-bars"></label>
-    
-    <a href="#" class="logo">Costly</a>
+    <!-- <button class="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button> -->
+
+    <button class="menu-toggle">☰</button>
+
 
     <nav class="navbar">
-        <a href="#Inicio">Inicio</a>
-        <a href="#Beneficios">Beneficios</a>
-        <a href="#Herramientas">Herramientas</a>
-        <a href="#Contacto">Contacto</a>
+        <a href="#home">Inicio</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#herramientasv">Herramientas</a>
+        <a href="#contacto">Contacto</a>
+        <button id="toggle-dark-mode">Modo Oscuro</button>
     </nav>
+
+    <script>
+      const toggleButton = document.getElementById('toggle-dark-mode');
+      const body = document.body;
+    
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode'); 
+    
+      });
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navbar = document.querySelector('.navbar');
+
+      menuToggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+    </script>
 
     <script 
     src="https://kit.fontawesome.com/fb4be2fcc2.js" 
@@ -42,13 +65,13 @@
 
     <div class="content">
         <h3>¡Mantente al día con los precios de productos esenciales!</h3>
-        <span> Costly te ayuda a comparar precios de productos esenciales, para que elijas siemprelo mejor para ti y tu familia </span>
-        <p>Somos una empresa que ofrece a los usuarios informacion precisa y actualizada sobre las mejores ofertas y la fluctuacion de precios de productos de primera necesidad</p>
-        <a href="#" class="btn">Ver planes</a>
+        <span> Costly te ayuda a comparar precios de productos esenciales, para que elijas siempre lo mejor para ti y tu familia </span>
+        <p>Somos una empresa que ofrece a los usuarios informacion precisa y actualizada sobre las mejores ofertas y la fluctuacion de precios de productos básicos</p>
+        <a href="#planes" class="btn">Ver planes</a>
     </div>
 
     <div class="image">
-        <img src="img/costly.png" class="landing-image">
+        <img src="public/assets/images/costly.png" class="landing-image">
     </div>
 </section>
 
@@ -71,112 +94,171 @@
     </div>
 </section>
 
-<section class="beneficios">
+<section class="beneficios" id="beneficios">
     <div class="container">
       <h2>Beneficios de Costly</h2>
   
       <div class="benefit-item">
         <div class="text-content">
-          <h3>Somos la aplicación de comercio, líder en el Perú</h3>
-          <p>
-            Porque ofrecemos a nuestros usuarios una plataforma confiable y eficiente para comparar precios en tiempo real, ayudándoles a tomar decisiones de compra inteligentes y a ahorrar en productos esenciales para el hogar.
-          </p>
+          <h3>La aplicación de comercio, líder en el Perú</h3>
+          <p>✅Comparación en tiempo real</p>
+          <p>✅Ahorro inteligente</p>
+          <p>✅Transparencia en precios</p>
+          <p>✅Plataforma confiable y segura</p>
         </div>
         <div class="image-content">
-          <img src="img/supermercado.png">
+          <img src="public/assets/images/supermercado.png">
         </div>
       </div>
   
       <div class="benefit-item">
         <div class="text-content">
           <h3>Información en tiempo real</h3>
-          <p>
-            Proporcionamos información en tiempo real sobre los precios de productos esenciales, permitiendo a nuestros usuarios acceder a las ofertas más actualizadas y comparar precios de forma rápida y eficiente.
-          </p>
+          <p>✅Ofertas más recientes</p>
+          <p>✅Eficiencia en la compra</p>
+          <p>✅Acceso desde cualquier dispositivo</p>
         </div>
         <div class="image-content">
-          <img src="img/tiempo.png">
+          <img src="public/assets/images/tiempo.png">
         </div>
       </div>
   
       <div class="benefit-item">
         <div class="text-content">
-          <h3>Pagos eficientes</h3>
-          <p>
-            Garantizamos pagos eficientes y seguros, facilitando a nuestros usuarios una experiencia de compra rápida y sin complicaciones.
-          </p>
+          <h3>Mayor visibilidad</h3>
+          <p>✅Ayudamos a las tiendas a destacar en el mercado</p>
+          <p>✅Ofrecemos practicidad para promocionarse</p>
+          <p>✅Potenciamos la conexión con compradores</p>
+          <p>✅Facilitamos que se conozcan más sus productos</p>
         </div>
         <div class="image-content">
-          <img src="img/pagos.png">
+          <img src="public/assets/images/visibilidad.png">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="herramientasv">
+  <section class="herramientasv" id="herramientasv">
     <h2>Herramientas para Comerciantes</h2>
     <div class="card">
       <h3>Comparar Precios</h3>
-      <img src="img/h1.png">
+      <img src="public/assets/images/h1.png">
       <p>Compara los distintos precios que ofrecen tus proveedores.</p>
     </div>
     <div class="card">
       <h3>Presupuesto</h3>
-      <img src="img/h2.png">
+      <img src="public/assets/images/h2.png">
       <p>Crea un presupuesto de tus activos que te proporcionan los proveedores.</p>
     </div>
     <div class="card">
       <h3>Listas de Compra</h3>
-      <img src="img/h3.png">
+      <img src="public/assets/images/h3.png">
       <p>Organiza tus activos que vayas a adquirir en una lista.</p>
     </div>
   </section>
 
   <section class="herramientasc">
-    <h2>Herramientas para Comerciantes</h2>
+    <h2>Herramientas para Consumidores</h2>
     <div class="card">
       <h3>Lista de compra</h3>
-      <img src="img/h4.png">
+      <img src="public/assets/images/h4.png">
       <p>Crea una lista de los productos que desees comprar, tomando en cuenta la comparación de precios.</p>
     </div>
     <div class="card">
       <h3>Comparar precios</h3>
-      <img src="img/h5.png">
-      <p>Compara precios de productos de todos los mercados alrededor del Perú.</p>
+      <img src="public/assets/images/h5.png">
+      <p>Compara los precios de tus productos favoritos en todos los mercados alrededor del Perú.</p>
     </div>
     <div class="card">
       <h3>Listas de Compra</h3>
-      <img src="img/h6.png">
+      <img src="public/assets/images/h6.png">
       <p>Comparte informacion acerca de precios y ofertas a tus conocidos cercanos.</p>
     </div>
   </section>
 
-  <section class="plans">
+  <section class="planes" id="planes">
     <h2>Planes disponibles</h2>
-    <div class="plan-container">
-      
+    <div class="card">
       <div class="plan">
-        <h3>Prueba gratis</h3>
+        <h3>Plan gratis</h3>
         <ul>
-          <li>Los usuarios pueden comparar precios de productos esenciales, pero con restricciones</li>
-          <li>El Plan Free ofrece actualizaciones de precios, aunque no en tiempo real</li>
-          <li>Publicidad ocasional mientras navegan en la plataforma</li>
+          <li>Los usuarios pueden comparar precios, pero con restricciones</li>
+          <li>Actualizaciones de precios, aunque no en tiempo real</li>
+          <li>Publicidad ocasional</li>
         </ul>
-        <button class="join-button">Unirse</button>
+        <button class="join-button">Empezar</button>
       </div>
       
       <div class="plan">
         <h3>Plan Completo</h3>
         <ul>
-          <li>Acceso ilimitado a la comparación de precios de cualquier producto, sin restricciones</li>
-          <li>Los usuarios reciben información actualizada en tiempo real</li>
-          <li>El Plan Completo elimina todos los anuncios</li>
+          <li>Acceso ilimitado a la comparación de precios, sin restricciones</li>
+          <li>Información actualizada en tiempo real</li>
+          <li>Se eliminan todos los anuncios</li>
         </ul>
         <button class="join-button">Unirse</button>
+        <button class="free-button">Prueba gratis</button>
+        <span class="trial-badge">1 mes</span> </div>
       </div>
       
     </div>
   </section>
-  
+
+  <footer>
+    <div class="contact-container" id="contacto">
+      <div class="logo">
+        <img src="public/assets/images/logo.png">
+        <h3>Costly</h3>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#herramientasv">Herramientas</a></li>
+        </ul>
+      </nav>
+      <div class="contacto">
+        <p><i class="fas fa-phone-alt"></i> +51 973964283</p>
+        <p><i class="fas fa-envelope"></i> soporte@costly.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Av. Alameda San Marcos 11, Chorrillos</p>
+        <div class="social-media">
+            <i href="#" class="fab fa-facebook-f" id="facebook"></i></a>
+            <i href="#" class="fab fa-twitter" id="twitter"></i></a>
+            <i href="#" class="fab fa-linkedin-in" id="linkedin"></i></a> 
+        </div>
+      </div>
+      <div class="apps">
+          <img src="public/assets/images/app-store.png" href="#" id="appStore"></a>
+          <img src="public/assets/images/google-play.png" href="#" id="googlePlay"></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const facebookLink = document.getElementById('facebook');
+    const twitterLink = document.getElementById('twitter');
+    const linkedinLink = document.getElementById('linkedin');
+    const appStoreLink = document.getElementById('appStore');
+    const googlePlayLink = document.getElementById('googlePlay');
+
+    facebookLink.addEventListener('click', () => {
+        window.location.href = 'https://www.facebook.com/'; 
+    });
+    
+    twitterLink.addEventListener('click', () => {
+        window.location.href = 'https://twitter.com/'; 
+    });
+      
+    linkedinLink.addEventListener('click', () => {
+        window.location.href = 'https://linkedin.com/'; 
+    });
+      
+    appStoreLink.addEventListener('click', () => {
+        window.location.href = 'https://www.apple.com/la/app-store/'; 
+    });
+
+    googlePlayLink.addEventListener('click', () => {
+        window.location.href = 'https://play.google.com/store/games?hl=es_419';
+    });
+  </script>
 </body>
 </html>
